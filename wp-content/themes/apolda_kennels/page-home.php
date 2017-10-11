@@ -2,15 +2,15 @@
 /*
 Template Name: Home
 */
-get_header();
+get_header(); ?>
 
-// <!-- SECTION -->
+<!-- SECTION -->
     <section class="passion">
 
         <h1> Passion For Pets. </h1>
 
             <p class="p"> Apolda Kennels is your go to place for top notch boarding,
-              grooming, and training services. <img src="assets/src/img/mica.png" alt="mica" title="mica" class="mica"> </p>
+              grooming, and training services. <img src="<?php bloginfo('template_url'); ?> assets/src/img/mica.png" alt="mica" title="mica" class="mica"> </p>
 
              <p class="p"> The pet lover's place! </p>
 
@@ -23,7 +23,7 @@ get_header();
             <div class="home-icons">
 
               <a href="https://www.facebook.com/Apolda-Kennels-148943101815749/">
-                <img class="big-f" target="_blank" src="assets/src/img/facebook.svg" alt="Facebook Icon" title="Facebook Icon"/></a>
+                <img class="big-f" target="_blank" src="<?php bloginfo('template_url'); ?>assets/src/img/facebook.svg" alt="Facebook Icon" title="Facebook Icon"/></a>
 
               <a href="https://plus.google.com/+ApoldaKennelsAurora?hl=en">
                 <img class="big-g" target="_blank" src="assets/src/img/googleplus.svg" alt="Google+ Icon" title="Google+ Icon"/></a>
@@ -39,7 +39,7 @@ get_header();
 
     </section>
 
-    // <!-- VIDEO -->
+<!-- VIDEO -->
 
     <div class="movie">
       <div class="movie-content">
