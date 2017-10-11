@@ -1,0 +1,211 @@
+.reservations{
+  color: $darkred;
+  font-family: $raleway;
+  font-size: em(12);
+  font-weight: bold;
+  padding: 1%;
+  width: 25%;
+  text-align: center;
+  margin: auto;
+  margin-top: 14%;
+  border: solid $red 2px;
+  position: static;
+  grid-area: "reservations";
+
+    a{
+      text-decoration: none;
+    }
+
+    a:hover{
+      font-weight: bold;
+    }
+}
+
+.phone{
+  color: $darkgray;
+}
+
+.grid-boarding{
+.red-info{
+  background-color: $red;
+  padding: 3%;
+  margin-top: 4%;
+  grid-column: span 1;
+}
+}
+
+.red-info{
+  background-color: $red;
+}
+
+.red-info p{
+  color: white;
+}
+
+.white-info{
+  background-color: white;
+  padding: 3%;
+  grid-area: "white-info";
+    h3{
+      color: $darkgray;
+    }
+}
+
+h5{
+  margin-bottom: 0%;
+}
+
+.red-bold{
+  color: $darkred;
+  font-weight: bolder;
+  font-family: $mont;
+  text-align: center;
+  line-height: em(24);
+}
+
+.gray-info{
+  background-color: white;
+  padding: 3%;
+  grid-area: "gray-info";
+  h3{
+    color: $darkgray;
+    margin-bottom: 0%;
+  }
+}
+
+.rates {
+  line-height: em(34);
+  @include no-bullets;
+  color: $red;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-family: $mont;
+  padding: 4%;
+}
+
+.price{
+  color: white;
+  font-weight: 100;
+}
+
+.nail-trim{
+  color: $red;
+  font-style: italic;
+  text-transform: none;
+  text-align: center;
+}
+
+// TABLE
+
+th{
+  color: $red;
+  font-size: em(25);
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+tr{
+  text-align: left;
+  color: $gray;
+}
+
+.avail-head{
+  text-align: left;
+}
+
+.tr1{
+  background-color: white;
+}
+
+.footer{
+  grid-area: "footer";
+}
+
+// MEDIA QUERIES
+
+@include breakpoint(tablet){
+  .grid-boarding {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "full-nav"
+      "reservations"
+      "red-info"
+      "white-info"
+      "red-bold"
+      "gray-info"
+      "footer";
+
+      .full-nav{
+        grid-column: span 2;
+        grid-area: "full-nav";
+      }
+
+      .reservations{
+        grid-column: span 2;
+        margin-top: 2%;
+        font-size: em(17);
+        grid-area: "reservations";
+      }
+
+      .red-info{
+        grid-column: span 1;
+        margin-top: 6%;
+        grid-area: "red-info";
+      }
+
+      .white-info{
+        grid-column: span 1;
+        background-color: $gray;
+        margin-top: 6%;
+        grid-area: "white-info";
+        h3{
+          color: white;
+        }
+        p{
+          color: white;
+        }
+      }
+
+      .red-bold{
+        grid-column: span 1;
+        color: white;
+        grid-area: "red-bold";
+      }
+
+      .gray-info{
+        grid-column: span 2;
+        h3{
+          margin-bottom: 2%;
+          grid-area: "gray-info";
+        }
+      }
+
+      .footer{
+        grid-column: span 2;
+        grid-area: "footer";
+      }
+
+      .rwd-table {
+        background:$darkgray;
+        color: #fff;
+        overflow: hidden;
+        font-family: $mont;
+        width: 40%;
+        line-height: em(34);
+        background-color: white;
+        margin-bottom: 20px;
+        padding: 1%;
+      }
+
+      .quote {
+        width: 20%;
+        padding: 1%;
+        img{
+          margin-right: 60px;
+          width: 15%;
+          margin-left: 10%;
+          margin-top: -2px;
+        }
+      }
+}
+}

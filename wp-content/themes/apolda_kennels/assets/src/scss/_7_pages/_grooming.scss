@@ -1,0 +1,160 @@
+.reservations{
+  color: $darkred;
+  font-family: $raleway;
+  font-size: em(12);
+  font-weight: bold;
+  padding: 1%;
+  width: 25%;
+  text-align: center;
+  margin: auto;
+  margin-top: 14%;
+  border: solid $red 2px;
+  position: static;
+    a{
+      text-decoration: none;
+    }
+
+    a:hover{
+      font-weight: bold;
+    }
+}
+
+.quote{
+  vertical-align: middle;
+  display: inline-block;
+  font-family: $mont;
+  color: $gray;
+  text-transform: uppercase;
+  padding: 2%;
+  position: relative;
+
+  img{
+    position: absolute;
+    width: 16%;
+    margin: auto;
+    margin-left: 98%;
+    margin-top: -18px;
+  }
+}
+
+.white-contact{
+  color: $darkred;
+  font-family: $mont;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  font-size: em(14);
+}
+
+.white-contact:hover{
+    color: $darkgray;
+  }
+
+tr{
+  color: $gray;
+  font-family: $mont;
+  font-weight: bolder;
+  line-height: em(32);
+}
+
+.grid-grooming{
+.red-info{
+  background-color: $red;
+  padding: 3%;
+  margin-top: 4%;
+  grid-column: span 1;
+}
+}
+
+// MEDIA QUERIES
+
+@include breakpoint(tablet){
+  .grid-grooming {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "full-nav"
+    "reservations"
+      "red-info"
+      "white-info"
+      "gray-info"
+      "footer";
+
+      .quote {
+        width: 20%;
+        padding: 1%;
+
+        img{
+          margin-right: 60px;
+          width: 15%;
+          margin-left: 10%;
+          margin-top: -2px;
+        }
+      }
+
+      .full-nav{
+        grid-column: span 2;
+      }
+
+      .reservations{
+        grid-column: span 2;
+        margin-top: 2%;
+        font-size: em(17);
+      }
+
+      .red-info{
+        grid-column: span 1;
+        margin-top: 6%;
+      }
+
+      .white-info{
+        grid-column: span 1;
+        background-color: $gray;
+        margin-top: 6%;
+
+        h3{
+          color: white;
+        }
+
+        p{
+          color: white;
+        }
+      }
+
+      .gray-info{
+        grid-column: span 2;
+        h3{
+          margin-bottom: 2%;
+        }
+      }
+
+      .rwd-table {
+        background:$darkgray;
+        color: #fff;
+        overflow: hidden;
+        font-family: $mont;
+        width: 40%;
+        line-height: em(34);
+        background-color: white;
+        margin-bottom: 20px;
+        padding: 1%;
+      }
+
+      .footer{
+        grid-column: span 2;
+      }
+}
+}
+
+@include breakpoint(regular-screen){
+.grid-grooming{
+  .quote{
+    width: 22%;
+    margin: auto;
+    padding: 1%;
+    .red-arrow{
+      width: 9%;
+      margin-left: 4%;
+    }
+  }
+  }
+}

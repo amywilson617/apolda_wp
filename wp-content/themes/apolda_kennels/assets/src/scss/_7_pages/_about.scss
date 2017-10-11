@@ -1,0 +1,182 @@
+
+.about-sec{
+  background-color: $darkgray;
+  padding: 4%;
+  margin-top: 4%;
+}
+
+.about-sec h1{
+  text-align: center;
+}
+
+.about-sec p{
+  color: white;
+}
+
+.sitting-dog{
+  width: 90%;
+  margin: auto;
+  display: block;
+}
+
+.home-away{
+  background-color: $red;
+  padding: 8%;
+}
+
+.home-away h1{
+  text-align: center;
+}
+
+.home-away p{
+  color: white;
+}
+
+.choose-us{
+  background-color: white;
+  padding: 2%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column,
+}
+
+.choose-us h4{
+  text-transform: uppercase;
+  color: $darkred;
+  font-family: $raleway;
+  font-size: em(24);
+  text-align: center;
+  padding-bottom: 0%;
+  margin: 0%;
+}
+
+.choose-us ul{
+  @include no-bullets;
+  vertical-align: middle;
+  display: inline-block;
+  font-family: $mont;
+  color: $gray;
+  text-transform: uppercase;
+  font-size: em(22);
+  padding: 2%;
+
+  li{
+    text-align: left;
+    padding-top: 2%;
+
+    &:before {
+      mask: url('/assets/src/img/red-check.svg') left top no-repeat;
+      mask-size: 25px 25px;
+      background: $gray;
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      content: '';
+      position: relative;
+      top: 3px;
+      margin-right: 5px;
+    }
+  }
+}
+
+.choose-us ul img{
+  width: 3%;
+  padding-top: 20px;
+  position: relative;
+  top: 25px;
+}
+
+.red-quote{
+  background-color: white;
+  color: $red;
+  font-family: $raleway;
+  font-weight: bolder;
+  padding: 1%;
+  text-align: center;
+  vertical-align: center;
+  grid-area: "red-quote";
+}
+
+// MEDIA QUERIES
+
+ @include breakpoint(tablet){
+   .grid-about {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     grid-template-rows: auto;
+     grid-template-areas: "nav"
+       "about-sec"
+       "home-away"
+       "choose-us"
+       "footer";
+   }
+
+   .nav{
+     grid-column: span 3;
+   }
+
+   .about-sec{
+     grid-column: span 2;
+   }
+
+   .home-away{
+     grid-column: span 1;
+     margin-top: 8%;
+   }
+
+   .choose-us{
+   grid-column: span 3;
+   }
+
+   .footer{
+     grid-column: span 3;
+   }
+
+   .red-quote{
+     text-align: center;
+     margin: auto;
+     display: block;
+   }
+   .grid-about aside{
+     display: none;
+   }
+ }
+
+  @include breakpoint(regular-screen){
+    .sitting-dog{
+      width: 50%;
+    }
+
+    .choose-us{
+      padding: 1%;
+    }
+
+    .choose-us h4{
+      text-transform: uppercase;
+      color: $darkred;
+      font-family: $raleway;
+      font-size: em(24);
+      text-align: center;
+      padding: 1%;
+    }
+
+    .choose-us ul{
+      @include no-bullets;
+      vertical-align: middle;
+      font-family: $mont;
+      color: gray;
+      text-transform: uppercase;
+      font-size: em(22);
+      text-align: center;
+      padding: 1%;
+    }
+
+    .choose-us ul img{
+      width: 2%;
+      padding-top: 20px;
+    }
+
+    h1{
+      padding: 0%;
+    }
+  }

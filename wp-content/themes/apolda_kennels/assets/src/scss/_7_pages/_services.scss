@@ -1,0 +1,245 @@
+.services{
+  background-color: $darkgray;
+  padding: 3%;
+  grid-area: "services";
+}
+
+.service-head{
+  text-transform: uppercase;
+  font-size: em(34);
+}
+
+.icon{
+  width: 20%;
+  margin: auto;
+  display: block;
+}
+
+.service-card{
+  background-color: white;
+  margin: 2%;
+  padding: 6%;
+  position: relative;
+  h3{
+    color: gray;
+  }
+
+  .rm{
+    position: absolute;
+
+      section{
+        position: relative;
+        margin-top: -30px;
+        margin-left: 80px;
+      }
+  }
+}
+
+.service-card .read-more{
+  text-align: center;
+  color: $darkgray;
+  text-decoration: none;
+  position: absolute;
+  padding: 10%;
+}
+
+.service-card .read-more:hover{
+  text-align: center;
+  color: $red;
+  text-decoration: none;
+}
+
+.service-card .body-copy{
+  color: gray;
+  text-align: center;
+  font-size: em(18);
+}
+
+.white-arrow{
+  width: 8%;
+  margin: auto;
+  margin-bottom: 3%;
+}
+
+.white-arrow:hover {
+  color:$darkgray;
+}
+
+.readmore-links {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+.pet-lover{
+  background-color: white;
+  padding: 2%;
+  grid-area: "pet-lover";
+
+  img{
+    width: 5%;
+    margin: auto;
+    display: block;
+    margin-bottom: 0%;
+  }
+
+  h4{
+    color: gray;
+    padding: 0%;
+  }
+
+  li{
+    color: $red;
+  }
+}
+
+.pet-lover ul{
+  @include no-bullets;
+  vertical-align: middle;
+  display: inline-block;
+  font-family: $mont;
+  color: $gray;
+  text-transform: uppercase;
+  font-size: em(18);
+  width: 100%;
+  margin: auto;
+  text-align: center;
+
+  li{
+    text-align: left;
+    padding-top: 1%;
+    text-align: center;
+
+    &:before {
+      mask: url('/assets/src/img/red-check.svg') left top no-repeat;
+      mask-size: 25px 25px;
+      background: $gray;
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      content: '';
+      position: relative;
+      top: 3px;
+      margin-right: 5px;
+    }
+  }
+}
+
+.golden{
+  width: 40%;
+  display: block;
+  margin: auto;
+  grid-area: "golden";
+}
+
+// MEDIA QUERIES
+
+@media (min-width: 590px){
+  .white-arrow{
+    width: 5%;
+  }
+}
+
+ @include breakpoint(tablet){
+   .grid-about {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     grid-template-rows: auto;
+     grid-template-areas:  "nav"
+       "service-head"
+       "service-card"
+       "pet-lover"
+       "golden"
+       "footer";
+   }
+
+   .nav{
+     grid-column: span 3;
+   }
+
+    .service-head{
+      grid-column: span 3;
+  }
+
+   .services{
+     grid-column: span 3;
+     display: flex;
+     flex-direction: column;
+     flex: 1;
+     justify-content: center;
+     flex-wrap: nowrap;
+     flex-flow: wrap;
+   }
+
+   .service-card{
+     flex-grow: 1;
+     flex-basis: auto;
+     width: 100px;
+     clear: both;
+   }
+
+   .pet-lover{
+     h4{
+       color: gray;
+     }
+
+     li{
+       color: $red;
+     }
+     grid-column: span 3;
+     background-color: white;
+   }
+
+   .icon{
+     width: 40%;
+   }
+
+   .golden {
+   grid-column: span 1;
+   width: 30%;
+   }
+
+   .white-arrow{
+     width: 15%;
+   }
+
+   .footer{
+     grid-column: span 3;
+   }
+
+   .red-quote{
+     text-align: center;
+     width: 100%;
+     margin: auto;
+     display: block;
+   }
+   .grid-about aside{
+     display: none;
+   }
+
+   .service-head{
+     padding: 0%;
+   }
+ }
+
+  @include breakpoint(regular-screen){
+    .pet-lover ul li img{
+      margin-bottom: 3%;
+      width: 10%;
+    }
+
+    .golden{
+      width: 10%;
+    }
+
+    .services{
+      margin-top: 14%;
+    }
+
+    .white-arrow{
+      width: 12%;
+      padding-top: 0%;
+    }
+  }
