@@ -23,7 +23,7 @@
 
 		<nav class="full-nav">
 
-		          <img class="logo" src="<?php bloginfo('template_url'); ?> assets/src/img/apolda-logo.png" alt="Logo" title="Logo" />
+		          <img class="logo" src="<?php bloginfo('template_url');?>/assets/src/img/apolda-logo.png" alt="Logo" title="Logo" />
 
 		           <ul class="nav">
 		              <li> <a href="index.html"> home </a> </li>

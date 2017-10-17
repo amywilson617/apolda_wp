@@ -1,17 +1,16 @@
 <?php get_header(); ?>
 
 	<main role="main">
-		<!-- section -->
-		<section>
 
-			<h1><?php _e( 'Latest Posts', 'html5blank' ); ?></h1>
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-			<?php get_template_part('partials/loop'); ?>
+			<?php endwhile; 
 
-			<?php get_template_part('partials/pagination'); ?>
+		else:
+				echo 'Nothing Found';
+		endif; ?>
 
-		</section>
-		<!-- /section -->
+
 	</main>
 
 <?php get_sidebar(); ?>
