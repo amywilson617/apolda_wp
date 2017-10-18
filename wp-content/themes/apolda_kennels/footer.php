@@ -4,7 +4,7 @@
 
 		<footer class="footer">
 
-			<ul>
+			<!-- <ul>
 					<li> <a href="index.html"> home </a> </li>
 					<li> <a href="about.html"> about us </a> </li>
 					<li> <a href="services.html"> services </a> </li>
@@ -13,10 +13,13 @@
 					<li> <a href="training.html"> training </a> </li>
 					<li> <a href="blog.html"> blog </a> </li>
 					<li> <a href="contact.html"> contact </a> </li>
-			</ul>
+			</ul> -->
+
+				<?php html5blank_nav_footer(); ?>
+
 
 				<p> Apolda Kennels, 2380 E New York St., Aurora, IL 60502 <br>
-				Tel: 630.898.2947 <br> &copy; 2017 Apolda Kennels, All Rights Reserved </p>
+				Tel: 630.898.2947 <br> &copy; <?= date('Y'); ?> Apolda Kennels, All Rights Reserved </p>
 
 				<div class="footer-icons">
 

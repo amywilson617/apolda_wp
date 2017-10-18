@@ -24,14 +24,18 @@
 	<main>
 		<nav class="full-nav">
 
-		          <img class="logo" src="<?php bloginfo('template_url');?>/assets/src/img/apolda-logo.png" alt="Logo" title="Logo" />
+		        <a href="<?php bloginfo ('url'); ?>">
+							<img class="logo" src="<?php bloginfo('template_url');?>/assets/src/img/apolda-logo.png" alt="Logo"
+							title="Logo"> </a>
 
-		           <ul class="nav">
+		          <!-- <ul class="nav">
 		              <li> <a href="index.html"> home </a> </li>
 		              <li> <a href="about.html"> about us </a> </li>
 		              <li> <a href="services.html"> services </a> </li>
 		              <li> <a href="blog.html"> blog </a> </li>
 		              <li> <a href="contact.html"> contact </a> </li>
-		          </ul>
+		          </ul> -->
+
+							<?php html5blank_nav(); ?>
 
 		      </nav>

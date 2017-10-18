@@ -192,8 +192,9 @@
 @include breakpoint(tablet){
 
       .blog{
-        width: 40%;
+        width: 100%;
       }
+      
       .blog-wrapper{
         .red-arrow {
           width: 8%;
