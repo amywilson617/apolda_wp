@@ -1,10 +1,12 @@
-<main class="grid-grooming">
+
 
 <?php
 /*
 Template Name: Grooming
 */
 get_header(); ?>
+
+<main class="grid-grooming">
 
 <!-- RESERVATION SNIPPET -->
         <div class="reservations">

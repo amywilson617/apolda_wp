@@ -1,7 +1,4 @@
-<section class="grid">
-<div class="phone-number">
-  <h2> 630.898.2947 </h2>
-</div>
+
 
 <?php
 /*
@@ -10,6 +7,11 @@ Template Name: Home
 get_header(); ?>
 
 <!-- SECTION -->
+
+<section class="grid">
+<div class="phone-number">
+  <h2> 630.898.2947 </h2>
+</div>
 
 
     <section class="passion">

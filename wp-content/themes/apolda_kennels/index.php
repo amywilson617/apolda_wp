@@ -1,6 +1,8 @@
-<div class="grid-blog">
+
 
 <?php get_header(); ?>
+
+<div class="grid-blog">
 
 
 <!-- MAIN -->
@@ -51,7 +53,9 @@
 <!-- LOOP -->
 
 
-<? php if ( have_posts ()) : while ( have_posts ()) : the_post (); ?>
+<? php if (have_posts()) :
+  while (have_posts()) :
+    the_post (); ?>
 
 <!-- PEOPLE FOOD POST -->
 
@@ -78,11 +82,11 @@
 
         </div>
 
-  <? php endwhile ; endif ; ?>
+<? php endwhile; ?>
 
 <?php else: ?>
 
-  No Posts Founds
+  <em> No Posts Found </em>
 
 <?php endif; ?>
 
@@ -100,6 +104,6 @@
 
 </section>
 
-<?php get_footer(); ?>
-
 </div>
+
+<?php get_footer(); ?>

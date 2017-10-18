@@ -1,10 +1,12 @@
-<main class="grid-contact">
+
 
 <?php
 /*
 Template Name: Contact
 */
 get_header(); ?>
+
+<main class="grid-contact">
 
 <!-- Give Us A Shout -->
 

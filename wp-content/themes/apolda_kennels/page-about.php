@@ -1,5 +1,5 @@
-<main class="grid-about">
-  
+
+
 <?php
 /*
 Template Name: About
@@ -7,6 +7,8 @@ Template Name: About
 get_header(); ?>
 
 <!-- ABOUT -->
+
+<main class="grid-about">
 
   <section class="about-sec">
     <h1> About Us </h1>

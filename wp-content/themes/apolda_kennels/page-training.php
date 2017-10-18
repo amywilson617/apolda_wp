@@ -1,10 +1,12 @@
-<main class="grid-boarding">
+
 
 <?php
 /*
 Template Name: Training
 */
 get_header(); ?>
+
+<main class="grid-boarding">
 
 
 <!-- RESERVATION SNIPPET -->
