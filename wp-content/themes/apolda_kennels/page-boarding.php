@@ -1,8 +1,11 @@
+<main class="grid-boarding">
+
 <?php
 /*
 Template Name: Boarding
 */
 get_header(); ?>
+
 
 <!-- RESERVATION SNIPPET -->
                 <div class="reservations">

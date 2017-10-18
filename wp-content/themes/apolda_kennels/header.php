@@ -18,9 +18,10 @@
 		<?php wp_head(); ?>
 
 	</head>
-	<body <?php body_class(); ?>>
+	<body <?php body_class(); ?>
 
 
+	<main>
 		<nav class="full-nav">
 
 		          <img class="logo" src="<?php bloginfo('template_url');?>/assets/src/img/apolda-logo.png" alt="Logo" title="Logo" />

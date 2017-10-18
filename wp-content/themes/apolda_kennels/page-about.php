@@ -1,3 +1,5 @@
+<main class="grid-about">
+  
 <?php
 /*
 Template Name: About

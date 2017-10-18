@@ -1,3 +1,8 @@
+<section class="grid">
+<div class="phone-number">
+  <h2> 630.898.2947 </h2>
+</div>
+
 <?php
 /*
 Template Name: Home
@@ -5,6 +10,8 @@ Template Name: Home
 get_header(); ?>
 
 <!-- SECTION -->
+
+
     <section class="passion">
 
         <h1> Passion For Pets. </h1>
@@ -47,6 +54,8 @@ get_header(); ?>
       frameborder="0"></iframe>
     </div>
     </div>
+
+  </section>
 
 
 <?php get_footer(); ?>

@@ -1,3 +1,5 @@
+<main class="grid-contact">
+
 <?php
 /*
 Template Name: Contact

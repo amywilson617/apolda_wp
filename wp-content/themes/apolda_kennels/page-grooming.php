@@ -1,3 +1,5 @@
+<main class="grid-grooming">
+
 <?php
 /*
 Template Name: Grooming
