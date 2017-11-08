@@ -194,10 +194,10 @@
       .blog{
         width: 100%;
       }
-      
+
       .blog-wrapper{
         .red-arrow {
-          width: 8%;
+          width: 2%;
 
           h3{
             padding: 0%;
@@ -212,16 +212,18 @@
 
       .latest-posts-section{
         margin-top: 4%;
+        width: 85%;
       }
 }
 @include breakpoint(regular-screen){
 
       .blog{
-        width: 17%;
+        width: 80%;
+        margin: auto;
       }
       .blog-wrapper{
         .red-arrow {
-          width: 12%;
+          width: 3%;
           margin-top: 20%;
           h3{
             margin: 0%;

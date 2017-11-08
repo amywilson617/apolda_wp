@@ -4,6 +4,7 @@
   padding: 2%;
   grid-area: "blog-full";
   grid-column: span 3;
+  text-align: left;
 
 .blog-date {
     font-size: em(12);
@@ -11,6 +12,7 @@
     color: $darkred;
     padding:3%;
     border-bottom: 2px $darkgray solid;
+    text-align: center;
   }
 
 .blog-header{
@@ -103,6 +105,10 @@
       margin-top: -1px;
     }
   }
+
+  .blog-full{
+    width: 80%;
+  }
 }
 
   @media (min-width: 471px){
@@ -120,7 +126,7 @@
   }
 
  .blog-full{
-   width: 90%;
+   width: 70%;
    margin: auto;
  }
 
@@ -157,7 +163,7 @@
 
 @include breakpoint(regular-screen){
  .blog-full{
-   width: 70%;
+   width: 56%;
    margin: auto;
    .blog-header{
      margin-top: 15%;

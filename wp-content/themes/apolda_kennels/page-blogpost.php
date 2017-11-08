@@ -12,37 +12,6 @@ get_header(); ?>
 
         <p class="blog-date"> Posted on August 29, 2017, 9:00 AM <br> by Apolda Kennels </p>
 
-        <p class="blog-content"> Lorem ipsum dolor sit amet, consectetuer
-          adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-          dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-          quis nostrud exerci tation ul. Ut wisi enim ad minim veniam, quis
-          nostrud exerci tation ul. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit, sed do eiusmod tempor incididunt ut laborequat. </p>
-
-          <p class="blog-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut laborequat. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit, sed do eiusmod tempor incididunt ut laborequat. Lorem
-          ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut laborequat. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit, sed do eiusmod tempor incididunt ut laborequat. </p>
-
-          <p class="blog-content"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut laborequat. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit, sed do eiusmod tempor incididunt ut laborequat. Lorem
-          ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut laborequat. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit, sed do eiusmod tempor incididunt ut laborequat. </p>
-
-          <p class="blog-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut laborequat. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit, sed do eiusmod tempor incididunt ut laborequat. Lorem
-          ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut laborequat. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit, sed do eiusmod tempor incididunt ut laborequat. </p>
-
-          <img class="full-blog-image" src="<?php bloginfo('template_url');?>/assets/src/img/shepard-pup.png" alt="Shepard"
-          title="Shepard">
-
       </div>
 
       <!-- BLOG SEARCH -->

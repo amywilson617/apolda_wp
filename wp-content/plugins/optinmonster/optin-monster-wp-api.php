@@ -5,7 +5,7 @@
  * Description: OptinMonster API plugin to connect your WordPress site to your OptinMonster account.
  * Author:		OptinMonster Team
  * Author URI:	https://optinmonster.com
- * Version:		1.2.2
+ * Version:		1.3.2
  * Text Domain: optin-monster-api
  * Domain Path: languages
  *
@@ -60,7 +60,7 @@ class OMAPI {
 	 *
 	 * @var string
 	 */
-	public $version = '1.2.2';
+	public $version = '1.3.2';
 
 	/**
 	 * The name of the plugin.
@@ -200,15 +200,19 @@ class OMAPI {
 	 */
 	public function load_admin() {
 
+		// Manually load notification api.
+		require_once plugin_dir_path( __FILE__ ) . 'includes/class-am-notification.php';
+
 		// Register admin components.
-		$this->actions  = new OMAPI_Actions();
-		$this->menu     = new OMAPI_Menu();
-		$this->content  = new OMAPI_Content();
-		$this->save     = new OMAPI_Save();
-		$this->refresh  = new OMAPI_Refresh();
-		$this->validate = new OMAPI_Validate();
-		$this->welcome  = new OMAPI_Welcome();
-		$this->review   = new OMAPI_Review();
+		$this->actions       = new OMAPI_Actions();
+		$this->menu          = new OMAPI_Menu();
+		$this->content       = new OMAPI_Content();
+		$this->save          = new OMAPI_Save();
+		$this->refresh       = new OMAPI_Refresh();
+		$this->validate      = new OMAPI_Validate();
+		$this->welcome       = new OMAPI_Welcome();
+		$this->review        = new OMAPI_Review();
+		$this->notifications = new AM_Notification( 'om', $this->version );
 
 		// Fire a hook to say that the admin classes are loaded.
 		do_action( 'optin_monster_api_admin_loaded' );
@@ -310,13 +314,13 @@ class OMAPI {
 
 
 		// Attempt to grab the new API Key
-        if ( empty( $option['api']['apikey'] ) ) {
-            if ( defined( 'OPTINMONSTER_REST_API_LICENSE_KEY' ) ) {
-                $apikey = OPTINMONSTER_REST_API_LICENSE_KEY;
-            }
-        } else {
-            $apikey = $option['api']['apikey'];
-        }
+		if ( empty( $option['api']['apikey'] ) ) {
+			if ( defined( 'OPTINMONSTER_REST_API_LICENSE_KEY' ) ) {
+				$apikey = OPTINMONSTER_REST_API_LICENSE_KEY;
+			}
+		} else {
+			$apikey = $option['api']['apikey'];
+		}
 
 		// Attempt to grab the Legacy API key and API user.
 		if ( empty( $option['api']['key'] ) ) {
@@ -337,11 +341,11 @@ class OMAPI {
 
 		// Check if we have any of the authentication data
 		if ( ! $apikey ) {
-            // Do we at least have Legacy API Key and User
-            if ( ! $key || ! $user ) {
-                return false;
-            }
-        }
+			// Do we at least have Legacy API Key and User
+			if ( ! $key || ! $user ) {
+				return false;
+			}
+		}
 
 
 		// Return the API credentials.
@@ -349,7 +353,7 @@ class OMAPI {
 			array(
 				'key'  => $key,
 				'user' => $user,
-                'apikey' => $apikey,
+				'apikey' => $apikey,
 			)
 		);
 
@@ -395,19 +399,30 @@ class OMAPI {
 		return false;
 	}
 
-    /**
-     * Check if the  main WooCommerce class is active.
-     *
-     * @since 1.1.9
-     *
-     * @return bool
-     */
+	/**
+	 * Check if the  main WooCommerce class is active.
+	 *
+	 * @since 1.1.9
+	 *
+	 * @return bool
+	 */
 	public function is_woocommerce_active() {
-	    if (class_exists( 'WooCommerce' ) ) {
-	        return true;
-        }
-	    return false;
-    }
+		if (class_exists( 'WooCommerce' ) ) {
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * Check to see if Mailpoet is active.
+	 *
+	 * @since 1.2.3
+	 *
+	 * @return bool
+	 */
+	public function is_mailpoet_active() {
+		return ( class_exists( 'WYSIJA_object' ) || class_exists( '\\MailPoet\\Config\\Initializer' ) );
+	}
 
 	/**
 	 * Returns possible API key error flag.
@@ -424,17 +439,17 @@ class OMAPI {
 	}
 
 	/**
-     * Retrieves the proper default view for the OptinMonster settings page.
-     *
-     * @since 1.0.0
-     *
-     * @return string $view The default view for the OptinMonster settings page.
-     */
-    public function get_view() {
+	 * Retrieves the proper default view for the OptinMonster settings page.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return string $view The default view for the OptinMonster settings page.
+	 */
+	public function get_view() {
 
-    	return $this->get_api_credentials() ? 'optins' : 'api';
+		return $this->get_api_credentials() ? 'optins' : 'api';
 
-    }
+	}
 
 	/**
 	 * Loads the default plugin options.

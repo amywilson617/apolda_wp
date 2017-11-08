@@ -151,7 +151,7 @@ class OMAPI_Refresh {
     public function message() {
 
 	    ?>
-	    <div class="updated"><p><?php _e( 'Your optins have been refreshed successfully.', 'optin-monster-api' ); ?></p></div>
+	    <div class="updated"><p><?php _e( 'Your campaigns have been refreshed successfully.', 'optin-monster-api' ); ?></p></div>
 	    <?php
 
     }

@@ -37,7 +37,6 @@
          color: $darkred;
      }
 
-
      a{
        color: $darkred;
    }
@@ -262,8 +261,9 @@ small {
 
 .contact-head{
   color: $darkgray;
-  font-size: em(26);
+  font-size: em(22);
   font-weight: bold;
+  font-family: $raleway;
 }
 
 // MEDIA QUERIES

@@ -61,11 +61,6 @@ get_header(); ?>
 
                 <p class="blog-date"> August 29, 2017 </p>
 
-                <p class="blog-content"> Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit, sed do eiusmod tempor incididunt ut laborequat.
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor.  </p>
-
                   <a href="blog-post.html" target="blank">
                    <img class="red-arrow" src="<?php bloginfo('template_url');?>/assets/src/img/red-arrow.svg" alt="Arrow" title="Arrow"></a>
 
@@ -85,11 +80,6 @@ get_header(); ?>
 						    <p class="blog-header"> Potty training essentials </p>
 
                 <p class="blog-date"> August 10, 2017 </p>
-
-                <p class="blog-content"> Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit, sed do eiusmod tempor incididunt ut laborequat.
-                sed do eiusmod tempor incididunt ut laborequa
-              sed do eiusmod tempor incididunt ut laborequa </p>
 
                 <a href="blog-post.html">
                  <img src="<?php bloginfo('template_url');?>/assets/src/img/red-arrow.svg" class="red-arrow" alt="Arrow" title="Arrow"></a>
@@ -111,11 +101,6 @@ get_header(); ?>
 
                 <p class="blog-date"> August 28, 2017 </p>
 
-                <p class="blog-content"> Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit, sed do eiusmod tempor incididunt ut laborequat.
-                  ed do eiusmod tempor incididunt ut labore sed do eiusmod
-                tempor incididunt ut laborequa sed do eiusmod.  </p>
-
                 <a href="blog-post.html">
                  <img src="<?php bloginfo('template_url');?>/assets/src/img/red-arrow.svg" class="red-arrow" alt="Arrow" title="Arrow"></a>
 
@@ -135,12 +120,6 @@ get_header(); ?>
 						    <p class="blog-header"> Spring allergy tips</p>
 
                 <p class="blog-date"> May 4, 2017 </p>
-
-                <p class="blog-content"> Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit, sed do eiusmod tempor incididunt ut laborequat.
-                  ed do eiusmod sed do eiusmod tempor incididunt ut laborequa
-                  sed do eiusmod tempor ised do eiusmod
-                  sed laborequancididunt ut laborequa </p>
 
                   <a href="blog-post.html">
   						     <img src="<?php bloginfo('template_url');?>/assets/src/img/red-arrow.svg" class="red-arrow" alt="Arrow" title="Arrow"></a>

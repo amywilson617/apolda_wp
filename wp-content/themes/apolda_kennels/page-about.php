@@ -11,40 +11,31 @@ get_header(); ?>
 <main class="grid-about">
 
   <section class="about-sec">
-    <h1> About Us </h1>
+    <h1> <?php the_field('blue_section_header'); ?> </h1>
 
-        <p class="body-copy"> Apolda Kennels was established in 1979 when the owner
-          realized he had a deep love of animals after adopting his first dog.
-          We truly have a passion for dogs and cats and take care of them on an
-          individualized basis. We spend the time needed to groom or train a pet
-          and never cut corners along the way. </p>
+        <p class="body-copy"> <?php the_field('blue_section_content'); ?> </p>
 
         <img class="sitting-dog" src="<?php bloginfo('template_url');?>/assets/src/img/sitting-dogs.png" alt="Sitting Dogs" title="Sitting Dogs" />
 
   </section>
 
   <section class="home-away">
-    <h1>Home Away From Home </h1>
+    <h1><?php the_field('red_section_header'); ?> </h1>
 
-    <p class="body-copy">No one likes to leave their pets behind for a long period of time, but travel and other
-      circumstances often arise in life that create a temporary  separation from our companions. </p>
-
-      <p class="body-copy">Apolda Kennels, located in Aurora, IL, ensures that your dog has as many comforts
-      of home as possible. We are pet owners at Apolda as well, and deeply understand
-      the role that pets play in our lives. </p>
+    <p class="body-copy"> <?php the_field('red_section_content'); ?> </p>
 
   </section>
 
 <!-- CHECKS -->
 
   <section class="choose-us">
-    <h4>  Why Choose Us? </h4>
+    <h4>  <?php the_field('choose_us_header'); ?> </h4>
 
     <div>
         <ul>
-            <li> Experience </li>
-            <li> Specialized Service </li>
-            <li> Pet owners serving pet owners </li>
+            <li> <?php the_field('choose_us_reason_1'); ?> </li>
+            <li> <?php the_field('choose_us_reason_2'); ?> </li>
+            <li> <?php the_field('choose_us_reason_3'); ?> </li>
         </ul>
 
     </div>

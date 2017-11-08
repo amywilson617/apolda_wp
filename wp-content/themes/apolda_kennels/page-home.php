@@ -10,24 +10,31 @@ get_header(); ?>
 
 <section class="grid">
 <div class="phone-number">
-  <h2> 630.898.2947 </h2>
+  <h2> <?php the_field('phone_number'); ?> </h2>
 </div>
 
 
     <section class="passion">
 
-        <h1> Passion For Pets. </h1>
+        <h1><?php the_field('h1'); ?> </h1>
 
-            <p class="p"> Apolda Kennels is your go to place for top notch boarding,
-              grooming, and training services. <img src="<?php bloginfo('template_url');?>/assets/src/img/mica.png" alt="mica" title="mica" class="mica"> </p>
+            <p class="p"> <?php the_field('passion_text_snippet_1'); ?>
 
-             <p class="p"> The pet lover's place! </p>
 
-            <a href="services.html"> <p class="call-to-action"> Check Out Our Services </p></a>
+              <!-- <FEAT</FEATIRED> IMAGE -->
+              <?php if(has_post_thumbnail()) : ?>
+                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+                    <?php the_post_thumbnail('small');?>
+                </a>
+              <?php endif; ?>
+
+             <p class="p"> <?php the_field('passion_text_snippet_2'); ?> </p>
+
+            <a href="services.html"> <p class="call-to-action"> <?php the_field('check_out_our_services'); ?> </p></a>
     </section>
 
     <section class="connect">
-        <h2> Let's Connect. </h2>
+        <h2> <?php the_field('h2'); ?></h2>
 
             <div class="home-icons">
 
@@ -41,10 +48,9 @@ get_header(); ?>
                 <img class="big-y" target="_blank" src="<?php bloginfo('template_url');?>/assets/src/img/yelp.svg" alt="Yelp Icon" title="Yelp Icon"/></a>
             </div>
 
-        <p class="body-copy"> Apolda Kennels has served over 5,000 pets! </p>
+        <p class="body-copy"> <?php the_field('pets'); ?> </p>
 
-        <p class="upper"> More than 25 years of experience serving the Aurora and Naperville,
-          IL areas with quality animal care </p>
+        <p class="upper"> <?php the_field('experience'); ?>  </p>
 
     </section>
 
@@ -58,6 +64,5 @@ get_header(); ?>
     </div>
 
   </section>
-
 
 <?php get_footer(); ?>

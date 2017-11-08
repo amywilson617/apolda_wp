@@ -267,7 +267,7 @@ class OMAPI_Save {
 				    delete_post_meta( $optin_id, '_omapi_test' );
 			    }
 
-			    if ( class_exists( 'WYSIJA' ) ) {
+			    if ( $this->base->is_mailpoet_active() ) {
 			    	$fields['mailpoet'] 	 = isset( $data['mailpoet'] ) ? 1 : 0;
 			    	$fields['mailpoet_list'] = isset( $data['mailpoet_list'] ) ? esc_attr( $data['mailpoet_list'] ) : 'none';
 		    	}

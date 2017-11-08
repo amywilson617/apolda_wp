@@ -23,11 +23,11 @@ get_header(); ?>
       </section>
 
     <!-- FORM -->
+  <?php the_content(); ?>
+  <!-- <form class="contact-form"> -->
 
-  <form class="contact-form">
-      <p class="contact-head">Contact Apolda Kennels</p>
 
-    <p>My
+    <!-- <p>My
         <label for="your-name">name</label> is
         <input type="text" name="your-name" id="your-name" minlength="3" placeholder="(your name here)" required> and</p>
 
@@ -54,9 +54,9 @@ get_header(); ?>
 
       </button>
 
-  </p>
+  </p> -->
 
-</form>
+<!-- </form> -->
 
 <!-- TABLE -->
           <table class="rwd-table">
@@ -68,37 +68,37 @@ get_header(); ?>
 
               <tr class="tr1">
                   <td data-th="Day"> Monday </td>
-                  <td data-th="Hours"> 8 am - 5 pm </td>
+                  <td data-th="Hours"> <?php the_field('monday'); ?> </td>
               </tr>
 
               <tr >
                   <td data-th="Day"> Tuesday </td>
-                  <td data-th="Hours"> 8 am - 5 pm </td>
+                  <td data-th="Hours"> <?php the_field('tuesday'); ?> </td>
               </tr>
 
               <tr class="tr1">
                   <td data-th="Day"> Wednesday </td>
-                  <td data-th="Hours"> 8:30 am - 10:30 am </td>
+                  <td data-th="Hours"><?php the_field('wednesday'); ?> </td>
               </tr>
 
               <tr>
                   <td data-th="Day"> Thursday </td>
-                  <td data-th="Hours"> 8 am - 5 pm </td>
+                  <td data-th="Hours"> <?php the_field('thursday'); ?> </td>
               </tr>
 
               <tr class="tr1">
                   <td data-th="Day"> Friday </td>
-                  <td data-th="Hours"> 8 am - 5 pm </td>
+                  <td data-th="Hours"> <?php the_field('friday'); ?> </td>
               </tr>
 
               <tr>
                   <td data-th="Day"> Saturday </td>
-                  <td data-th="Hours"> 8 am - 1 pm </td>
+                  <td data-th="Hours"> <?php the_field('saturday'); ?> </td>
               </tr>
 
               <tr class="tr1">
                   <td data-th="Day"> Sunday </td>
-                  <td data-th="Hours"> 9 am - 10 am </td>
+                  <td data-th="Hours"> <?php the_field('sunday'); ?> </td>
               </tr>
           </table>
 

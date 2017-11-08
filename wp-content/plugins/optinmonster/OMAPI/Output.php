@@ -1128,7 +1128,7 @@ class OMAPI_Output {
 	 */
 	public function wp_helper() {
 		// Only try to use the MailPoet integration if it is active.
-		if ( is_plugin_active( 'wysija-newsletters/index.php' ) ) {
+		if ( $this->base->is_mailpoet_active() ) {
 			wp_enqueue_script(
 				$this->base->plugin_slug . '-wp-helper',
 				plugins_url( 'assets/js/helper.js', OMAPI_FILE ),

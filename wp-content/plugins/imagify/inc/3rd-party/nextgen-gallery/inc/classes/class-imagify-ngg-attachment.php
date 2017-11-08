@@ -14,7 +14,7 @@ class Imagify_NGG_Attachment extends Imagify_Attachment {
 	 *
 	 * @var string
 	 */
-	const VERSION = '1.1.1';
+	const VERSION = '1.1.2';
 
 	/**
 	 * The image object.
@@ -109,6 +109,19 @@ class Imagify_NGG_Attachment extends Imagify_Attachment {
 	}
 
 	/**
+	 * Get the attachment SQL data row.
+	 *
+	 * @since 1.5
+	 * @author Jonathan Buttigieg
+	 *
+	 * @access public
+	 * @return array
+	 */
+	public function get_row() {
+		return Imagify_NGG_DB::get_instance()->get( $this->id );
+	}
+
+	/**
 	 * Get the attachment optimization data.
 	 *
 	 * @since 1.5
@@ -120,19 +133,6 @@ class Imagify_NGG_Attachment extends Imagify_Attachment {
 	public function get_data() {
 		$row = $this->row ? $this->row : $this->get_row();
 		return isset( $row['data'] ) ? maybe_unserialize( $row['data'] ) : false;
-	}
-
-	/**
-	 * Get the attachment SQL data row.
-	 *
-	 * @since 1.5
-	 * @author Jonathan Buttigieg
-	 *
-	 * @access public
-	 * @return array
-	 */
-	public function get_row() {
-		return imagify_ngg_db()->get( $this->id );
 	}
 
 	/**
@@ -217,6 +217,24 @@ class Imagify_NGG_Attachment extends Imagify_Attachment {
 	}
 
 	/**
+	 * Tell if the current attachment has the required WP metadata.
+	 *
+	 * @since  1.6.12
+	 * @author Grégory Viguier
+	 *
+	 * @return bool
+	 */
+	public function has_required_metadata() {
+		static $sizes;
+
+		if ( ! isset( $sizes ) ) {
+			$sizes = C_Gallery_Storage::get_instance()->get_image_sizes();
+		}
+
+		return $sizes && $this->get_original_path();
+	}
+
+	/**
 	 * Update the metadata size of the attachment.
 	 *
 	 * @since 1.5
@@ -280,7 +298,7 @@ class Imagify_NGG_Attachment extends Imagify_Attachment {
 					$error_status = 'already_optimized';
 				}
 
-				imagify_ngg_db()->update( $this->id, array(
+				Imagify_NGG_DB::get_instance()->update( $this->id, array(
 					'pid'    => $this->id,
 					'status' => $error_status,
 					'data'   => serialize( $data ),
@@ -395,7 +413,7 @@ class Imagify_NGG_Attachment extends Imagify_Attachment {
 		$data = $this->fill_data( null, $response, $attachment_url );
 
 		// Save the optimization level.
-		imagify_ngg_db()->update( $this->id, array(
+		Imagify_NGG_DB::get_instance()->update( $this->id, array(
 			'pid'                => $this->id,
 			'optimization_level' => $optimization_level,
 		) );
@@ -416,7 +434,7 @@ class Imagify_NGG_Attachment extends Imagify_Attachment {
 		$data = $this->optimize_thumbnails( $optimization_level, $data );
 
 		// Save the status to success.
-		imagify_ngg_db()->update( $this->id, array(
+		Imagify_NGG_DB::get_instance()->update( $this->id, array(
 			'pid'    => $this->id,
 			'status' => 'success',
 		) );
@@ -537,7 +555,7 @@ class Imagify_NGG_Attachment extends Imagify_Attachment {
 				$data = apply_filters( 'imagify_fill_ngg_thumbnail_data', $data, $response, $this->id, $thumbnail_path, $thumbnail_url, $size_key, $optimization_level );
 			}
 
-			imagify_ngg_db()->update( $this->id, array(
+			Imagify_NGG_DB::get_instance()->update( $this->id, array(
 				'pid'  => $this->id,
 				'data' => serialize( $data ),
 			) );
@@ -617,7 +635,7 @@ class Imagify_NGG_Attachment extends Imagify_Attachment {
 		/**
 		 * Remove Imagify data.
 		 */
-		imagify_ngg_db()->delete( $image->pid );
+		Imagify_NGG_DB::get_instance()->delete( $image->pid );
 		$this->row = null;
 
 		/**

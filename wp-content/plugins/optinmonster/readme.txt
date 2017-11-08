@@ -2,8 +2,8 @@
 Contributors: optinmonster, griffinjt, smub
 Tags: wordpress popup, popup, lightbox popup, mailchimp, aweber, campaign monitor, constant contact, exit-intent, madmimi, infusionsoft, getresponse, hubspot, marketo, activecampaign, pardot, totalsend, emma, icontact, mailerlite, mailpoet, google analytics, pop over, optin forms, email list, subscribers, wordpress popup form, lightbox, wordpress popups, popups, lightbox popups, optin form, wordpress optin form, sidebar optin form, sidebar optin, sidebar form, wordpress overlay popup, wordpress popup plugin, popup plugin, wordpress lightbox optin, wordpress lightbox optin form, after post optin form, wordpress after post optin form, after post optin form plugin, lightbox popup plugin, wordpress popup solution, exit intent, exit-intent, optinmonster, optin monster, optin-monster, mobile popup, mobile popups, mobile optin forms, mobile optins, lightbox optins, wordpress mobile popup, wordpress mobile popups, wordpress mobile optin forms, wordpress lightbox optins, lead gen, lead generation, wordpress lead generation, lead generation wordpress, wordpress lead gen, fullscreen, welcome gate, interstitial
 Requires at least: 3.5.1
-Tested up to: 4.8.1
-Stable tag: 1.2.2
+Tested up to: 4.8
+Stable tag: 1.3.2
 License: GNU General Public License v2.0 or later
 
 OptinMonster helps you grow your email list by converting visitors into subscribers and customers. Get more email subscribers now!
@@ -16,7 +16,7 @@ Did you know that over 70% of website visitors who leave your website will never
 > <strong>OptinMonster App</strong><br>
 > OptinMonster is a standalone application that integrates with all web platforms including WordPress. You must have an OptinMonster account in order to take advantage of this plugin. <a href="http://optinmonster.com/pricing/" rel="friend" title="OptinMonster Plans">Click here to create your account.</a>
 
-OptinMonster comes with an easy to use form builder that allows you to create beautiful optin forms that are proven to convert. You can create various type of optins including WordPress popup forms, floating header and footer bars, slide-ins also known as scroll triggered boxes, sidebar forms, after post forms, in-line forms, mobile-specific forms, welcome gates and more.
+OptinMonster comes with an easy to use form builder that allows you to create beautiful optin forms that are proven to convert. You can create various type of campaigns including WordPress popup forms, floating header and footer bars, slide-ins also known as scroll triggered boxes, sidebar forms, after post forms, in-line forms, mobile-specific forms, welcome gates and more.
 
 Using OptinMonster forms combined with our exit-intent technology, page-level targeting, and behavior automation, users have seen an instant boost in conversion rate, _even upwards of 785%!_
 
@@ -29,7 +29,7 @@ Let's take a look at how OptinMonster can help you get more email subscribers.
 
 OptinMonster allows you to build high converting opt-in forms in minutes, not hours!
 
-You can choose from 8 different type of optins including: popup forms, floating bars, slide-ins, sidebar forms, after-post forms, in-line forms, mobile-only popup forms, and Canvas.
+You can choose from 8 different type of campaigns including: popup forms, floating bars, slide-ins, sidebar forms, after-post forms, in-line forms, mobile-only popup forms, and Canvas.
 
 All of our templates are 100% responsive and mobile friendly.
 
@@ -138,7 +138,7 @@ OptinMonster® and Exit-Intent® are registered trademarks of Retyp, LLC.
 1. Install OptinMonster either via the WordPress.org plugin repository or by uploading the files to your server.
 2. Activate OptinMonster.
 3. Navigate to the OptinMonster tab at the bottom of your admin menu and enter your OptinMonster API Username and API Key to connect your OptinMonster account to your WordPress site.
-4. Click on the Optins tab and configure the output settings for each optin campaign you have created in your OptinMonster account.
+4. Click on the Campaigns tab and configure the output settings for each campaign you have created in your OptinMonster account.
 
 == Frequently Asked Questions ==
 
@@ -156,9 +156,20 @@ OptinMonster is the <a href="http://optinmonster.com" rel="friend" title="OptinM
 = Testimonial =
 
 > OptinMonster is unlike most plugins. Most plugins cost you money. OptinMonster makes you money. Most barely get updated - OptinMonster just keeps getting better.<br>
-> Chris Lema - CTO Crowd Favorite
+> Chris Lema - VP of Product at Liquid Web
 
 == Changelog ==
+
+= 1.3.2 =
+* Fixed issue where campaigns of an "advanced age" may not work with MailPoet.
+
+= 1.3.1 =
+* Fixed missing files in WordPress.org repository.
+
+= 1.3.0 =
+* Is it "campaign"? Or "optin"? No, it's definitely "campaign".
+* OptinMonster now works with the shiny new MailPoet 3.
+* We're feeling a little lighter after removing some deprecated code.
 
 = 1.2.2 =
 * Updated API calls to always be done over HTTPS.

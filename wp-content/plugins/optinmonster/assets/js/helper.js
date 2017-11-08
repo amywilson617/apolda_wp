@@ -8,7 +8,7 @@ jQuery(document).ready(function($){
 	$(document).on('OptinMonsterPreOptin', function(event, optin, object){
 		$.each(omapi_localized.slugs, function(i, v) {
 
-			if ( i !== optin.optin ) {
+			if ( i !== optin.optin.replace('-', '_') ) {
 				return;
 			}
 
