@@ -5,6 +5,10 @@
   margin-top: 6%;
 }
 .shout{
+  h3{
+    color: $darkred;
+  }
+
    ul{
      color: $darkred;
      line-height: em(30);
@@ -22,6 +26,7 @@
        margin: auto;
        color: $darkred;
      }
+
 
      img{
        margin-left: -40px;
@@ -78,19 +83,30 @@
 
 // FORM
 
-form{
+form p{
   background-color: white;
   padding: 2%;
-  width: 96%;
+  width: 90%;
+  margin: auto;
+  border-bottom: 2px dashed $darkgray;
 
-  label{
+  input{
+    background-color: white;
+  }
+
+  button, input[type=submit]{
+    color: $darkred;
+    border: .5px dashed $darkred;
+    padding: 3%;
+    width: 30%;
+  }
+
+  button, input[type=submit]:hover{
     color: $darkgray;
-    font-family: $mont;
-    font-size: em(20);
-    padding: 1%;
   }
 
   textarea{
+    background-color: lightgray;
     font-family: $mont;
     color: $gray;
     font-size: em(18);
@@ -101,9 +117,39 @@ form{
   input{
     font-family: $mont;
     color: $gray;
-    font-size: em(18);
+    font-size: em(13);
     padding: 1%;
   }
+}
+
+span.wpcf7-not-valid-tip{
+  color: $darkred;
+  font-family: $raleway;
+  font-style: italic;
+  font-size: 12px;
+}
+
+form p textarea{
+  background-color: white;
+  width: 100%;
+  font-size: em(13);
+  text-align: center;
+}
+
+div.wpcf7-validation-errors{
+  border: none;
+  color: $gray;
+  font-family: $raleway;
+  font-style: italic;
+  font-size: 12px;
+}
+
+div.wpcf7-mail-sent-ok{
+  border: none;
+  color: $gray;
+  font-family: $raleway;
+  font-style: italic;
+  font-size: 12px;
 }
 
 body {
@@ -123,14 +169,10 @@ label {
 }
 
 textarea,input {
-  border: none;
-  outline: none;
-  border-radius: 0;
   text-align: center;
   background: none;
   font-weight: 500;
   font-size: 25px;
-  color: $darkgray;
   max-width: 90%;
   padding: 1rem;
   border: 2px dashed $darkgray;
@@ -142,84 +184,6 @@ textarea {
   text-align: left;
   resize: none;
   width: 90%;
-  border-color: $darkgray;
-}
-
-textarea:focus {
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 2px dashed $darkgray;
-}
-
-textarea:focus:required:valid {
-  border: 2px dashed $darkgray;
-  border-bottom: 2px dashed $darkgray;
-}
-
-textarea:required:valid {
-  border-bottom: 2px dashed $darkgray;
-}
-
-input {
-  border-bottom: 2px dashed $darkgray;
-}
-
-input:required,
-textarea:required {
-  border-bottom: 2px dashed $darkgray;
-}
-
-input:focus {
-  border-bottom: 2px dashed $darkgray;
-  background-color: white;
-}
-
-input:required:valid {
-  border-bottom: 2px dashed $darkgray;
-}
-
-input:required:invalid {
-  color: $gray;;
-}
-
-::-webkit-input-placeholder {
-  text-align: center;
-  color: $gray;
-  font-style: italic;
-  font-weight: 400;
-}
-
-:-moz-placeholder {
-  text-align: center;
-  color: $darkgray;
-  font-style: italic;
-  font-weight: 400;
-}
-
-::-moz-placeholder {
-  text-align: center;
-  color: $darkgray;
-  font-style: italic;
-  font-weight: 400;
-}
-
-:-ms-input-placeholder {
-  text-align: center;
-  color: $darkgray;
-  font-style: italic;
-  font-weight: 400;
-}
-
-.expanding {
-  vertical-align: top;
-}
-
-.send-icn {
-  fill: $gray;
-}
-
-.send-icn:hover {
-  fill: $darkred;
-  cursor: pointer;
 }
 
 button {
@@ -279,22 +243,29 @@ small {
 @include breakpoint(tablet){
   .grid-contact {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: "nav"
       "mica-looking"
       "shout"
       "rwd-table"
-      "contact-form"
+      "wpcf7"
       "footer";
     }
 
+    form p button, form p input[type=submit]{
+      color: $darkred;
+      border: .5px dashed $darkred;
+      padding: 1%;
+      width: 10%;
+    }
+
     .nav{
-        grid-column: span 3;
+        grid-column: span 2;
         grid-area: "nav";
     }
 
       .mica-looking{
-        grid-column: span 2;
+        grid-column: span 1;
         grid-area: "mica-looking";
       }
 
@@ -336,17 +307,18 @@ small {
         grid-column: span 1;
         width: 90%;
         margin-bottom: 4%;
-        margin: auto;
         grid-area: "rwd-table";
       }
 
-      .contact-form{
+      .wpcf7{
+        width: 100%;
+        margin: auto;
         grid-column: span 2;
-        grid-area: "contact-form";
+        grid-area: "wpcf7"
       }
 
       .footer {
-        grid-column: span 3;
+        grid-column: span 2;
         grid-area: "footer";
       }
 

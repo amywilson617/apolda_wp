@@ -10,7 +10,16 @@ get_header(); ?>
     <?php while(have_posts()): the_post(); ?>
     <div class="service-card">
 
-        <img class="icon" src="<?php bloginfo('template_url'); ?>/assets/src/img/boarding.svg" alt="Home" title="Home">
+      <?php if(has_post_thumbnail()) :
+        $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id(), 'small'); ?>
+        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+            <img src="<?= $thumbnail[0]; ?>" class="icon" alt="Icon" />
+        </a>
+      <?php endif; ?>
+
+      
+
+        <!-- <img class="icon" src="<?php bloginfo('template_url'); ?>/assets/src/img/boarding.svg" alt="Home" title="Home"> -->
 
           <h3> <?php the_title(); ?> </h3>
 

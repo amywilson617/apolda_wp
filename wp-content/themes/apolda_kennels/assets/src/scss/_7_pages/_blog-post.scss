@@ -40,19 +40,21 @@
   padding-top: 4%;
   padding-bottom: 4%;
   grid-area: "blog-search";
+
+  .text{
+    height: 20px;
+    width: 40%;
+    margin: auto;
+    display: inline;
+    padding: 2%;
+    font-family: $raleway;
+    font-size: em(13);
+    color: $gray;
+    background-color: $darkgray;
+  }
 }
 
-.text{
-  height: 20px;
-  width: 40%;
-  margin: auto;
-  display: inline;
-  padding: 2%;
-  font-family: $raleway;
-  font-size: em(13);
-  color: $gray;
-  background-color: $darkgray;
-}
+
 
 .submit{
   color: white;

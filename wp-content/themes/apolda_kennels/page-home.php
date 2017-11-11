@@ -22,9 +22,10 @@ get_header(); ?>
 
 
               <!-- <FEAT</FEATIRED> IMAGE -->
-              <?php if(has_post_thumbnail()) : ?>
+              <?php if(has_post_thumbnail()) :
+                $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large'); ?>
                 <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-                    <?php the_post_thumbnail('small');?>
+                    <img src="<?= $thumbnail[0]; ?>" class="mica" alt="Mica" />
                 </a>
               <?php endif; ?>
 

@@ -15,7 +15,14 @@ get_header(); ?>
 
         <p class="body-copy"> <?php the_field('blue_section_content'); ?> </p>
 
-        <img class="sitting-dog" src="<?php bloginfo('template_url');?>/assets/src/img/sitting-dogs.png" alt="Sitting Dogs" title="Sitting Dogs" />
+        <?php if(has_post_thumbnail()) :
+          $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large'); ?>
+          <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+              <img src="<?= $thumbnail[0]; ?>" class="sitting-dog" alt="Sitting Dogs" />
+          </a>
+        <?php endif; ?>
+
+        <!-- <img class="sitting-dog" src="<?php bloginfo('template_url');?>/assets/src/img/sitting-dogs.png" alt="Sitting Dogs" title="Sitting Dogs" /> -->
 
   </section>
 

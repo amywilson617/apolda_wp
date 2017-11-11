@@ -5,3 +5,24 @@
 @import "header";
 @import "footer";
 @import "nav";
+
+ul{
+  list-style-type: none;
+}
+ul li.cat-item cat-item-1 {
+  display: none;
+}
+
+form.search{
+  visibility: hidden;
+  display: none;
+}
+
+#post-404{
+  background-color: $darkgray;
+  div.sidebar-widget{
+    visibility: hidden;
+    display: none;
+
+  }
+}

@@ -43,6 +43,7 @@
 
 	</div>
 
+<?php get_sidebar(); ?>
 <?php endwhile; endif; ?>
 
 <?php get_footer(); ?>

@@ -59,7 +59,7 @@ get_header(); ?>
 <!-- </form> -->
 
 <!-- TABLE -->
-          <table class="rwd-table">
+          <!-- <table class="rwd-table">
 
               <tr>
                 <th class="avail-head">Day </th>
@@ -100,7 +100,7 @@ get_header(); ?>
                   <td data-th="Day"> Sunday </td>
                   <td data-th="Hours"> <?php the_field('sunday'); ?> </td>
               </tr>
-          </table>
+          </table> -->
 
 
 <?php get_footer(); ?>

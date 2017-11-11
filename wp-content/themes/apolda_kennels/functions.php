@@ -414,7 +414,7 @@ remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altoget
  		'redirect'		=> false
  	));
 
- 	/* acf_add_options_sub_page(array(
+ acf_add_options_sub_page(array(
  		'page_title' 	=> 'Theme Header Settings',
  		'menu_title'	=> 'Header',
  		'parent_slug'	=> 'theme-general-settings',
@@ -424,7 +424,7 @@ remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altoget
  		'page_title' 	=> 'Theme Footer Settings',
  		'menu_title'	=> 'Footer',
  		'parent_slug'	=> 'theme-general-settings',
- 	)); */
+ 	)); 
 
  }
 
