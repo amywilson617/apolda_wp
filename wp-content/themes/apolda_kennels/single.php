@@ -22,6 +22,9 @@
 
 <div class="blog-search">
 
+
+	<?php get_template_part('partials/searchform'); ?>
+
 		<input class="text" type="text" name="search" value="Search here"><br><br>
 		<input class="submit" type="submit" value="Search">
 
@@ -41,6 +44,12 @@
 
 		</ul>
 
+	</div>
+
+	<div id="pagination">
+	<div class="prev_post"><?php next_post_link('%link', 'Newer Posts') ?></div>
+	<div class="next_post"><?php previous_post_link('%link', 'Older Posts') ?></div><br
+	clear="both" />
 	</div>
 
 <?php get_sidebar(); ?>

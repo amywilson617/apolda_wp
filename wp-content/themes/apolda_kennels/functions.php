@@ -198,16 +198,32 @@ function remove_width_attribute( $html ) {
 if (function_exists('register_sidebar'))
 {
     // Define Sidebar Widget Area 1
-    register_sidebar(array(
-        'name' => __('Sidebar', 'html5blank'),
-        'description' => __('Description for this widget-area...', 'html5blank'),
-        'id' => 'widget-area-1',
-        'before_widget' => '<div id="%1$s" class="%2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
-    ));
+//     register_sidebar(array(
+//         'name' => __('Sidebar', 'html5blank'),
+//         'description' => __('Description for this widget-area...', 'html5blank'),
+//         'id' => 'widget-area-sidebar',
+//         'before_widget' => '<div id="%1$s" class="%2$s">',
+//         'after_widget' => '</div>',
+//         'before_title' => '<h3>',
+//         'after_title' => '</h3>'
+//     ));
+// }
+
+// Enable widgets
+
+function blank_widgets_init(){
+  register_sidebar(array(
+    'name' => ('First Aside Widget'),
+    'id' +> 'aside-widget',
+    'description' => 'This widget is for the sidebar',
+    'before_widget' => '<div class="widget">',
+    'after_widget' => '</div>',
+    'before_title' => '<h2',
+    'after_title' => '</h2>'
+  ));
 }
+
+add_action('widgets_init', 'blank_widgets_init');
 
 // Remove wp_head() injected Recent Comment styles
 function my_remove_recent_comments_style()
@@ -424,9 +440,19 @@ remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altoget
  		'page_title' 	=> 'Theme Footer Settings',
  		'menu_title'	=> 'Footer',
  		'parent_slug'	=> 'theme-general-settings',
- 	)); 
+ 	));
 
  }
 
 
 // TODO: INCLUDE AH HA CREATIVE BRANDED LOGIN SCREEN
+
+// move comment text area to bottom of form
+
+function wpb_move_comment_field_to_bottom( $fields ) {
+    $comment_field = $fields['comment'];
+    unset( $fields['comment'] );
+    $fields['comment'] = $comment_field;
+    return $fields;
+}
+add_filter( 'comment_form_fields', 'wpb_move_comment_field_to_bottom' );
