@@ -46,20 +46,23 @@ div.sidebar-widget{
 .next_post{
   font-family: $raleway;
   color: $darkred;
-  width: 10%;
+  width: 20%;
   margin: auto;
   font-size: em(14);
   padding: 3px;
-  margin: 3px;
+  margin: 30px;
   margin: auto;
+  text-align: center;
+  border: 1px $darkgray dashed;
 }
 
 .prev_post{
   font-family: $raleway;
   color: $darkred;
-  width: 10%;
+  width: 20%;
   font-size: em(14);
   padding: 3px;
-  margin: 3px;
+  margin: 30px;
   margin: auto;
+  text-align: center;
 }

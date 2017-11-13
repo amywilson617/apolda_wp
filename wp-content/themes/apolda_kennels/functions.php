@@ -195,9 +195,9 @@ function remove_width_attribute( $html ) {
 
 
 // If Dynamic Sidebar Exists
-if (function_exists('register_sidebar'))
-{
-    // Define Sidebar Widget Area 1
+// if (function_exists('register_sidebar'))
+// {
+//     Define Sidebar Widget Area 1
 //     register_sidebar(array(
 //         'name' => __('Sidebar', 'html5blank'),
 //         'description' => __('Description for this widget-area...', 'html5blank'),
@@ -209,19 +209,19 @@ if (function_exists('register_sidebar'))
 //     ));
 // }
 
-// Enable widgets
+// Enable widgets - efren's example
 
-function blank_widgets_init(){
-  register_sidebar(array(
-    'name' => ('First Aside Widget'),
-    'id' +> 'aside-widget',
-    'description' => 'This widget is for the sidebar',
-    'before_widget' => '<div class="widget">',
-    'after_widget' => '</div>',
-    'before_title' => '<h2',
-    'after_title' => '</h2>'
-  ));
-}
+// function blank_widgets_init(){
+//   register_sidebar(array(
+//     'name' => ('First Aside Widget'),
+//     'id' +> 'aside-widget',
+//     'description' => 'This widget is for the sidebar',
+//     'before_widget' => '<div class="widget">',
+//     'after_widget' => '</div>',
+//     'before_title' => '<h2',
+//     'after_title' => '</h2>'
+//   ));
+// }
 
 add_action('widgets_init', 'blank_widgets_init');
 

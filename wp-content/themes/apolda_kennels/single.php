@@ -30,22 +30,6 @@
 
 </div>
 
-	<!-- RECENT POSTS -->
-
-	<div class="recent-posts">
-
-		<ul>
-
-				<li class="body-copy" > Potty training essentials <a href="potty-post.html">
-					<img src="<?php bloginfo('template_url');?>/assets/src/img/red-arrow.svg" class="red-arrow" alt="arrow"> </a></li>
-
-				<li class="body-copy"> Caring for an aging pup <a href="aging-pup-post.html">
-					<img src="<?php bloginfo('template_url');?>/assets/src/img/red-arrow.svg" class="red-arrow" alt="arrow"> </a></li>
-
-		</ul>
-
-	</div>
-
 	<div id="pagination">
 	<div class="prev_post"><?php next_post_link('%link', 'Newer Posts') ?></div>
 	<div class="next_post"><?php previous_post_link('%link', 'Older Posts') ?></div><br
