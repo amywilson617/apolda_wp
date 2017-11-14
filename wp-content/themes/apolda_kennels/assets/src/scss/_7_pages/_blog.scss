@@ -157,10 +157,6 @@
     padding: 1%;
     color: $darkgray;
     margin: 0%;
-
-    &:hover{
-      color: $gray;
-    }
   }
 
   .red-arrow{
@@ -204,7 +200,7 @@
 
       .blog-wrapper{
         .red-arrow {
-          width: 2%;
+          width: 4%;
 
           h3{
             padding: 0%;

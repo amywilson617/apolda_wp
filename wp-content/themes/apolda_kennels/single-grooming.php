@@ -1,8 +1,8 @@
 
 
 <?php
-/*
-Template Name: Grooming
+/**
+* WP Post Template: Grooming
 */
 get_header(); ?>
 

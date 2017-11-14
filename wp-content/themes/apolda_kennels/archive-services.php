@@ -17,7 +17,7 @@ get_header(); ?>
         </a>
       <?php endif; ?>
 
-      
+
 
         <!-- <img class="icon" src="<?php bloginfo('template_url'); ?>/assets/src/img/boarding.svg" alt="Home" title="Home"> -->
 

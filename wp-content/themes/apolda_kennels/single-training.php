@@ -1,9 +1,12 @@
 
 
 <?php
-/*
-Template Name: Training
+
+/**
+* WP Post Template: Training
 */
+
+
 get_header(); ?>
 
 <main class="grid-boarding">

@@ -1,9 +1,10 @@
 
 
 <?php
-/*
-Template Name: Boarding
+/**
+* WP Post Template: Boarding
 */
+
 get_header(); ?>
 
 <main class="grid-boarding">

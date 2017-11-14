@@ -1,4 +1,8 @@
 <div class="comments">
+
+<!-- Comment Form -->
+
+
 	<?php comment_form(); ?>
 
 <?php if (have_comments()) : ?>
