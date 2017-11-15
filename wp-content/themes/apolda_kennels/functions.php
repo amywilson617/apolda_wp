@@ -193,7 +193,6 @@ function remove_width_attribute( $html ) {
    return $html;
 }
 
-
 // If Dynamic Sidebar Exists
 // if (function_exists('register_sidebar'))
 // {
@@ -208,22 +207,8 @@ function remove_width_attribute( $html ) {
 //         'after_title' => '</h3>'
 //     ));
 // }
-
-// Enable widgets - efren's example
-
-// function blank_widgets_init(){
-//   register_sidebar(array(
-//     'name' => ('First Aside Widget'),
-//     'id' +> 'aside-widget',
-//     'description' => 'This widget is for the sidebar',
-//     'before_widget' => '<div class="widget">',
-//     'after_widget' => '</div>',
-//     'before_title' => '<h2',
-//     'after_title' => '</h2>'
-//   ));
-// }
-
-add_action('widgets_init', 'blank_widgets_init');
+//
+// add_action('widgets_init', 'blank_widgets_init');
 
 // Remove wp_head() injected Recent Comment styles
 function my_remove_recent_comments_style()
