@@ -20,16 +20,28 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'Apolda Kennels');
 
+if (file_exists(dirname___FILE__) . '/local-config.php')){
+	include(dirname(__FILE__) . '/local-config.php');
+}
+
+if(!defined('DB_NAME')){
+	define('DB_NAME', 'amyw1709_apoldakennels_wp');
+}
 /** MySQL database username */
-define('DB_USER', 'root');
+if (!defined('DB_USER')){
+	define('DB_USER', 'amyw1709_apolda');
+}
 
 /** MySQL database password */
-define('DB_PASSWORD', 'root');
+if (!defined('DB_PASSWORD')){
+	define('DB_PASSWORD', 'TRh#$%wa(g)G');
+}
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+if (!defined('DB_HOST')) {
+	define('DB_HOST', 'localhost');
+}
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');

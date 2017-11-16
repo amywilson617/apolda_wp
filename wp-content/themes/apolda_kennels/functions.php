@@ -210,6 +210,26 @@ function remove_width_attribute( $html ) {
 //
 // add_action('widgets_init', 'blank_widgets_init');
 
+
+//efren's widget
+
+function blank_widgets_init(){
+/*sidebar widget*/
+    register_sidebar(array(
+        'name' => ('First Sidebar Widget'),
+        'id' => 'sidebar-widget',
+        'description' => 'This widget is for the sidebar',
+        'before_widget' => '<div class="widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2>',
+        'after_title' => '</h2>'
+    ));
+}
+
+add_action('widgets_init', 'blank_widgets_init');
+
+
+
 // Remove wp_head() injected Recent Comment styles
 function my_remove_recent_comments_style()
 {

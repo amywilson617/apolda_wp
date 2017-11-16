@@ -1,10 +1,8 @@
 <!-- sidebar -->
 
 
-<?php dynamic_sidebar('First Aside Widget'); ?>
+<!-- trying get widget with code below -->
 
-
-
-
+	<?php dynamic_sidebar(First Sidebar Widget); ?>
 
 <!-- /sidebar -->
