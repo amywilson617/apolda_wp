@@ -26,6 +26,10 @@
 }
 
 .grid-boarding{
+
+  .rwd-table{
+    width: 97%;
+  }
 .red-info{
   background-color: $red;
   padding: 3%;
@@ -99,7 +103,7 @@ h5{
 
 th{
   color: $red;
-  font-size: em(25);
+  font-size: em(14);
   text-align: left;
   margin-bottom: 30px;
 }
@@ -190,7 +194,7 @@ tr{
         color: #fff;
         overflow: hidden;
         font-family: $mont;
-        width: 40%;
+        width: 80%;
         line-height: em(34);
         background-color: white;
         margin-bottom: 20px;

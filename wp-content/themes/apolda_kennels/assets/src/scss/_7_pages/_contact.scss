@@ -248,6 +248,7 @@ small {
       "shout"
       "rwd-table"
       "wpcf7"
+      "widget"
       "footer";
     }
 
@@ -312,6 +313,10 @@ small {
       .wpcf7{
         width: 100%;
         grid-column: span 3;
+      }
+
+      .widget{
+        grid-column: span 2;
       }
 
       .footer {

@@ -27,7 +27,6 @@ form.search{
   }
 }
 
-
 // SIDEBAR
 
 div.sidebar-widget{
@@ -38,7 +37,6 @@ div.sidebar-widget{
   clear: both;
   position: relative;
 }
-
 
 // pagination
 
@@ -158,6 +156,49 @@ a.comment-reply-link{
   padding: 30px;
 }
 
+ // WIDGET
 aside{
-  background-color: red;
+  background-color: $darkgray;
+  width: 80%;
+  margin: auto;
+  margin-top: 40px;
+  padding: 2px;
+  h3{
+  padding: none;
+  }
+  tfoot{
+    a{
+      display:none;
+    }
+  }
+  caption{
+    color: white;
+    font-family: $raleway;
+    font-size: em(20);
+  }
+  #calendar_wrap{
+    width: 100%;
+    margin: auto;
+  }
+  #wp-calendar{
+    width: 100%;
+    margin: auto;
+  }
+}
+
+@include breakpoint(tablet){
+  aside{
+    width: 50%;
+    column-span: 3;
+
+    #calendar_wrap{
+      width: 70%;
+      margin: auto;
+    }
+    #wp-calendar{
+      width: 100%;
+      margin: auto;
+    }
+  }
+
 }

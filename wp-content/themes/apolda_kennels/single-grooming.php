@@ -16,11 +16,8 @@ get_header(); ?>
           <span class="phone"> <?php the_field('reservation_email'); ?> </span></a> </p>
         </div>
 
-
 <!-- RED INFO -->
         <section class="red-info">
-
-
 
           <h3> <?php the_field('red_section_head'); ?> </h3>
 
@@ -81,6 +78,5 @@ get_header(); ?>
                   </div>
 
         </section>
-
 
 <?php get_footer(); ?>

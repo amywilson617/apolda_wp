@@ -13,7 +13,6 @@ get_header(); ?>
   <h2> <?php the_field('phone_number'); ?> </h2>
 </div>
 
-
     <section class="passion">
 
         <h1><?php the_field('h1'); ?> </h1>

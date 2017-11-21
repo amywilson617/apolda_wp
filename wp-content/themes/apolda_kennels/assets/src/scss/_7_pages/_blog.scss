@@ -16,6 +16,9 @@
     width: 250px;
   }
 }
+.grid-blog{
+  width: 100%;
+}
 
 .latest-posts{
   background-color: white;
@@ -200,7 +203,7 @@
 
       .blog-wrapper{
         .red-arrow {
-          width: 4%;
+          width: 3%;
 
           h3{
             padding: 0%;
@@ -221,12 +224,14 @@
 @include breakpoint(regular-screen){
 
       .blog{
-        width: 80%;
+        width: 100%;
         margin: auto;
+        margin: 30px;
       }
       .blog-wrapper{
+        width: 60%;
         .red-arrow {
-          width: 3%;
+          width: 2%;
           margin-top: 20%;
           h3{
             margin: 0%;
@@ -234,7 +239,7 @@
         }
       }
       .blog__image{
-        width: 90%;
+        width: 60%;
         margin: auto;
       }
 

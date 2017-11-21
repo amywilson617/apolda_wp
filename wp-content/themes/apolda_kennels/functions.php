@@ -193,41 +193,6 @@ function remove_width_attribute( $html ) {
    return $html;
 }
 
-// If Dynamic Sidebar Exists
-// if (function_exists('register_sidebar'))
-// {
-//     Define Sidebar Widget Area 1
-//     register_sidebar(array(
-//         'name' => __('Sidebar', 'html5blank'),
-//         'description' => __('Description for this widget-area...', 'html5blank'),
-//         'id' => 'widget-area-sidebar',
-//         'before_widget' => '<div id="%1$s" class="%2$s">',
-//         'after_widget' => '</div>',
-//         'before_title' => '<h3>',
-//         'after_title' => '</h3>'
-//     ));
-// }
-//
-// add_action('widgets_init', 'blank_widgets_init');
-
-
-//efren's widget
-
-// function blank_widgets_init(){
-/*sidebar widget*/
-//     register_sidebar(array(
-//         'name' => ('Footer Widget'),
-//         'id' => 'footer-widget',
-//         'description' => 'This widget is for the footer',
-//         'before_widget' => '<div class="widget">',
-//         'after_widget' => '</div>',
-//         'before_title' => '<h2>',
-//         'after_title' => '</h2>'
-//     ));
-// }
-//
-// add_action('widgets_init', 'blank_widgets_init');
-
 function twentytwelve_widgets_init(){
 register_sidebar( array(
 'name' => 'Contact Widget',
@@ -241,8 +206,6 @@ register_sidebar( array(
 }
 
 add_action( 'widgets_init', 'twentytwelve_widgets_init');
-
-
 
 
 // Remove wp_head() injected Recent Comment styles

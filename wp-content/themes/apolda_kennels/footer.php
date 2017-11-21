@@ -2,24 +2,19 @@
 
 		<!-- TODO: ADD GOOGLE ANALYTICS -->
 
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+							<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109983956-1"></script>
+							<script>
+							  window.dataLayer = window.dataLayer || [];
+							  function gtag(){dataLayer.push(arguments);}
+							  gtag('js', new Date());
+
+							  gtag('config', 'UA-109983956-1');
+							</script>
+
 		<footer class="footer">
 
-			<!-- <ul>
-					<li> <a href="index.html"> home </a> </li>
-					<li> <a href="about.html"> about us </a> </li>
-					<li> <a href="services.html"> services </a> </li>
-					<li> <a href="boarding.html"> boarding </a> </li>
-					<li> <a href="grooming.html"> grooming </a> </li>
-					<li> <a href="training.html"> training </a> </li>
-					<li> <a href="blog.html"> blog </a> </li>
-					<li> <a href="contact.html"> contact </a> </li>
-			</ul> -->
-
 				<?php html5blank_nav_footer(); ?>
-
-
-
-
 
 				<p> Apolda Kennels, 2380 E New York St., Aurora, IL 60502 <br>
 				Tel: 630.898.2947 <br> &copy; <?= date('Y'); ?> Apolda Kennels, All Rights Reserved </p>

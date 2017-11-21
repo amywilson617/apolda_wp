@@ -5,12 +5,9 @@
 /**
 * WP Post Template: Training
 */
-
-
 get_header(); ?>
 
 <main class="grid-boarding">
-
 
 <!-- RESERVATION SNIPPET -->
         <div class="reservations">

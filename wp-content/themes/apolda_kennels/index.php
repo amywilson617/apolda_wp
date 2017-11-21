@@ -4,7 +4,6 @@
 
 <div class="grid-blog">
 
-
 <!-- MAIN -->
 
     <!-- LATEST POSTS -->
@@ -83,7 +82,6 @@
   <em> No Posts Found </em>
 
 <?php endif; ?>
-
 
 <!-- BLOG ALERTS -->
 <section class="alerts">

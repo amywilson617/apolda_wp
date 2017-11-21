@@ -17,8 +17,6 @@ get_header(); ?>
         </a>
       <?php endif; ?>
 
-
-
         <!-- <img class="icon" src="<?php bloginfo('template_url'); ?>/assets/src/img/boarding.svg" alt="Home" title="Home"> -->
 
           <h3> <?php the_title(); ?> </h3>
@@ -32,8 +30,6 @@ get_header(); ?>
                 </div>
     </div>
   <?php endwhile; ?>
-
-
 
 </section>
 <?php endif; ?>
@@ -59,6 +55,5 @@ get_header(); ?>
     </section>
 
     <img class="golden" src="<?php bloginfo('template_url'); ?>/assets/src/img/golden.png" alt="Golden" title="Golden">
-
 
 <?php get_footer(); ?>
