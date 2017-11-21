@@ -19,13 +19,11 @@
 
 				</div>
 
-
 	<div id="pagination">
 			<div class="prev_post"><?php next_post_link('%link', ' View Newer Posts') ?></div>
 			<div class="next_post"><?php previous_post_link('%link', 'View Older Posts') ?></div><br
 			clear="both" />
 	</div>
-
 
 <?php comments_template();?>
 

@@ -21,26 +21,26 @@
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 
-if (file_exists(dirname___FILE__) . '/local-config.php')){
+if (file_exists(dirname(__FILE__) . '/local-config.php')){
 	include(dirname(__FILE__) . '/local-config.php');
 }
 
-if(!defined('DB_NAME')){
+if (!defined('DB_NAME')){
 	define('DB_NAME', 'amyw1709_apoldakennels_wp');
 }
 /** MySQL database username */
 if (!defined('DB_USER')){
-	define('DB_USER', 'amyw1709_apolda');
+		define('DB_USER', 'amyw1709_apolda');
 }
 
-/** MySQL database password */
+// /** MySQL database password */
 if (!defined('DB_PASSWORD')){
-	define('DB_PASSWORD', 'TRh#$%wa(g)G');
+define('DB_PASSWORD', 'TRh#$%wa(g)G');
 }
 
-/** MySQL hostname */
-if (!defined('DB_HOST')) {
-	define('DB_HOST', 'localhost');
+// /** MySQL hostname */
+if (!defined('DB_HOST')){
+define('DB_HOST', 'localhost');
 }
 
 /** Database Charset to use in creating database tables. */
@@ -89,7 +89,7 @@ $table_prefix  = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
 
 /* That's all, stop editing! Happy blogging. */
 

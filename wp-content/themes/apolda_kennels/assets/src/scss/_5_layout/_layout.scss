@@ -37,7 +37,6 @@ div.sidebar-widget{
   float: right;
   clear: both;
   position: relative;
-
 }
 
 
@@ -52,7 +51,6 @@ div.sidebar-widget{
   padding: 10px;
   margin-right: 34%;
   text-align: center;
-  border: 1px $darkgray dashed;
   float: right;
 }
 
@@ -64,7 +62,6 @@ div.sidebar-widget{
   padding: 10px;
   margin-left: 34%;
   text-align: center;
-  border: 1px $darkgray dashed;
   float: left;
 }
 
@@ -159,4 +156,8 @@ a.comment-reply-link{
   border: 1px black solid;
   margin-bottom: 40px;
   padding: 30px;
+}
+
+aside{
+  background-color: red;
 }

@@ -18,6 +18,9 @@
 				<?php html5blank_nav_footer(); ?>
 
 
+
+
+
 				<p> Apolda Kennels, 2380 E New York St., Aurora, IL 60502 <br>
 				Tel: 630.898.2947 <br> &copy; <?= date('Y'); ?> Apolda Kennels, All Rights Reserved </p>
 
@@ -37,7 +40,6 @@
 		</footer>
 
 	</main>
-
 
 	</body>
 </html>

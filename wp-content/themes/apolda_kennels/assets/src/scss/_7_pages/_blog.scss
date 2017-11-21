@@ -66,7 +66,7 @@
   margin: auto;
 
   .red-arrow{
-    width: 6%;
+    width: 4%;
     position: absolute;
     right: 0;
     bottom: 0;
@@ -129,11 +129,11 @@
   flex-direction: row;
   margin-top: auto;
   width: 100%;
-  img{
-    align-items: flex-end;
-    position: static;
-    float: right;
-  }
+      img{
+        align-items: flex-end;
+        position: static;
+        float: right;
+      }
 }
 
 .blog-header{

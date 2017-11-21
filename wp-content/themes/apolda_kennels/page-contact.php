@@ -10,6 +10,22 @@ get_header(); ?>
 
 <!-- Give Us A Shout -->
 
+<!-- messing with widgets -->
+
+<aside id="%1$s" class="widget %2$s">
+				<div id="footer-sidebar" class="secondary">
+									<div id="footer-sidebar1">
+									<?php
+									if(is_active_sidebar('footer-sidebar-1')){
+									dynamic_sidebar('footer-sidebar-1');
+									}
+									?>
+									</div>
+				</div>
+</aside>
+
+
+
         <img class="mica-looking" src="<?php bloginfo('template_url');?>/assets/src/img/mica-looking.png" alt="Mica" title="mica">
 
         <section class="shout">
@@ -57,8 +73,6 @@ get_header(); ?>
   </p> -->
 
 <!-- </form> -->
-
-<!-- TABLE -->
           <!-- <table class="rwd-table">
 
               <tr>

@@ -213,20 +213,35 @@ function remove_width_attribute( $html ) {
 
 //efren's widget
 
-function blank_widgets_init(){
+// function blank_widgets_init(){
 /*sidebar widget*/
-    register_sidebar(array(
-        'name' => ('First Sidebar Widget'),
-        'id' => 'sidebar-widget',
-        'description' => 'This widget is for the sidebar',
-        'before_widget' => '<div class="widget">',
-        'after_widget' => '</div>',
-        'before_title' => '<h2>',
-        'after_title' => '</h2>'
-    ));
+//     register_sidebar(array(
+//         'name' => ('Footer Widget'),
+//         'id' => 'footer-widget',
+//         'description' => 'This widget is for the footer',
+//         'before_widget' => '<div class="widget">',
+//         'after_widget' => '</div>',
+//         'before_title' => '<h2>',
+//         'after_title' => '</h2>'
+//     ));
+// }
+//
+// add_action('widgets_init', 'blank_widgets_init');
+
+function twentytwelve_widgets_init(){
+register_sidebar( array(
+'name' => 'Contact Widget',
+'id' => 'footer-sidebar-1',
+'description' => 'On Contact Page',
+'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+'after_widget' => '</aside>',
+'before_title' => '<h3 class="widget-title">',
+'after_title' => '</h3>',
+) );
 }
 
-add_action('widgets_init', 'blank_widgets_init');
+add_action( 'widgets_init', 'twentytwelve_widgets_init');
+
 
 
 
@@ -346,7 +361,7 @@ function html5blankcomments($comment, $args, $depth)
 	<div id="div-comment-<?php comment_ID() ?>" class="comment-body">
 	<?php endif; ?>
 	<div class="comment-author vcard">
-	<?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['180'] ); ?>
+	<?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args = null ); ?>
 	<?php printf(__('<cite class="fn">%s</cite> <span class="says">says:</span>'), get_comment_author_link()) ?>
 	</div>
 <?php if ($comment->comment_approved == '0') : ?>
