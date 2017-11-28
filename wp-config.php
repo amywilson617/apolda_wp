@@ -30,33 +30,69 @@ define('WP_CACHE', true); // Added by W3 Total Cache
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 
-if (file_exists(dirname(__FILE__) . '/local-config.php')){
-	include(dirname(__FILE__) . '/local-config.php');
-}
 
-if (!defined('DB_NAME')){
-	define('DB_NAME', 'amyw1709_apoldakennels_wp');
-}
-/** MySQL database username */
-if (!defined('DB_USER')){
-		define('DB_USER', 'amyw1709_apolda');
-}
 
-// /** MySQL database password */
-if (!defined('DB_PASSWORD')){
-define('DB_PASSWORD', 'TRh#$%wa(g)G');
-}
+// ** MySQL settings - You can get this info from your web host ** //
+// Include local configuration
+if (file_exists(dirname(__FILE__) . '/local-config.php')) {
+ 	include(dirname(__FILE__) . '/local-config.php');
+ }
 
-// /** MySQL hostname */
-if (!defined('DB_HOST')){
-define('DB_HOST', 'localhost');
-}
+// Global DB config
+ if (!defined('DB_NAME')) {
+ 	define('DB_NAME', 'amyw1709_apoldakennels_wp');
+ }
+ if (!defined('DB_USER')) {
+ 	define('DB_USER', 'amyw1709_apolda');
+ }
+ if (!defined('DB_PASSWORD')) {
+ 	define('DB_PASSWORD', 'TRh#$%wa(g)G');
+ }
+ if (!defined('DB_HOST')) {
+ 	define('DB_HOST', 'localhost');
+ }
 
 /** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8mb4');
+ if (!defined('DB_CHARSET')) {
+ 	define('DB_CHARSET', 'utf8');
+ }
 
 /** The Database Collate type. Don't change this if in doubt. */
-define('DB_COLLATE', '');
+if (!defined('DB_COLLATE')) {
+	define('DB_COLLATE', '');
+ }
+
+
+
+// !!!!!!!!!!! open in local host below
+
+// if (file_exists(dirname(__FILE__) . '/local-config.php')){
+// 	include(dirname(__FILE__) . '/local-config.php');
+// }
+//
+// if (!defined('DB_NAME')){
+// 	define('DB_NAME', 'amyw1709_apoldakennels_wp');
+// }
+// /** MySQL database username */
+// if (!defined('DB_USER')){
+// 		define('DB_USER', 'amyw1709_apolda');
+// }
+//
+// // /** MySQL database password */
+// if (!defined('DB_PASSWORD')){
+// define('DB_PASSWORD', 'TRh#$%wa(g)G');
+// }
+//
+// // /** MySQL hostname */
+// if (!defined('DB_HOST')){
+// define('DB_HOST', 'localhost');
+// }
+//
+// /** Database Charset to use in creating database tables. */
+// define('DB_CHARSET', 'utf8mb4');
+//
+// /** The Database Collate type. Don't change this if in doubt. */
+// define('DB_COLLATE', '');
 
 /**#@+
  * Authentication Unique Keys and Salts.
